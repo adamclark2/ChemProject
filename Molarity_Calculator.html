@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Adam's Chem Project</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="Molarity_Js.js"></script>
+    </head>
+    <body class="container">
+        <nav class="navbar navbar-expand-sm bg-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">About</a>
+                </li>
+                <li class="nav-item bg-secondary">
+                <a class="nav-link" href="Molarity_Calculator.html">Molarity Calculator</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="row">
+            <div class="col-12 text-center h3">
+                M<small>1</small>V<small>1</small> = M<small>2</small>V<small>2</small>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="form-check">
+                <input id="calc_mol" type="radio" name="calc" class="form-check-input" onclick="click_calc()">
+                <label for="calc_mol" class="form-check-label">Calculate Moles Needed</label>
+            </div>
+
+            <div class="form-check">
+                <input id="calc_vol" type="radio" name="calc" class="form-check-input" onclick="click_calc()">
+                <label for="calc_vol" class="form-check-label">Calculate Volume Needed</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 h2">
+                <div class="row form-inline">
+                    <div class="col-2 text-right">M<small>1</small>=</div>
+                    <div class="col-4 mr-4">
+                        <input id="m1" onkeydown="calc_modified()" onkeyup="calc_modified()" class="form-control">
+                    </div>
+                    <div class="col-4 ml-4">
+                        <select class="form-control">
+                            <option>Moles</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-inline">
+                    <div class="col-2 text-right">V<small>1</small>=</div>
+                    <div class="col-4 mr-4"><input onkeydown="calc_modified()" onkeyup="calc_modified()" class="form-control" id="v1"></div>
+                    <div class="col-4 ml-4">
+                        <select class="form-control">
+                            <option>L</option>
+                            <option>mL</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 h2">
+                    <div class="row form-inline">
+                        <div class="col-2 text-right">M<small>2</small>=</div>
+                        <div class="col-4 mr-4"><input id="m2" onkeyup="calc_modified()" class="form-control"></div>
+                        <div class="col-4 ml-4">
+                            <select class="form-control">
+                                <option>Moles</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-inline">
+                        <div class="col-2 text-right">V<small>2</small>=</div>
+                        <div class="col-4 mr-4"><input onkeydown="calc_modified()" onkeyup="calc_modified()" id="v2" class="form-control"></div>
+                        <div class="col-4 ml-4">
+                            <select class="form-control">
+                                <option>L</option>
+                                <option>mL</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+
+    </body>
+</html>
