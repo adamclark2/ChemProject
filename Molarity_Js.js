@@ -54,5 +54,12 @@ function calc_modified(){
     }else{
         vol2_in.value = (mol1_in.value * vol1_in.value) / mol2_in.value;
     }
-    
+
+    if(Number(vol2_in.value) > Number(vol1_in.value)){
+        beaker_fill_left = vol1_in.value/vol2_in.value;
+        beaker_fill_right = 1;
+    }else{
+        beaker_fill_left = 1;
+        beaker_fill_right = vol2_in.value/vol1_in.value;;
+    }    
 }
