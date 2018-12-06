@@ -1,0 +1,198 @@
+% By: Adam Clark
+% Date: December 2018
+% Prof: Benedict
+% Class: CHY 113
+% Title: Adam's Chem Project
+
+\documentclass[14pt]{extarticle}
+
+% Imports
+\usepackage[utf8]{inputenc}
+\usepackage{cancel}
+\usepackage{amsmath}
+
+% Macros
+\newcommand{\chemElement}[4]{ % Make a tile with a chemical element on it
+    \\~\\
+    \fbox{
+        \parbox{90}{
+            \normalsize \flushleft
+            {#3}\\
+            \center \huge
+            {#1}
+            \center \normalsize
+            {#2}\\
+            
+            \small
+            {#4}
+            \\~\\
+        }
+    }
+} % \chemElement{H}{Hydrogen}{1}{1.008}
+
+
+
+% Begin Doc
+\begin{document}
+    %: Title Page
+    \center
+    \LARGE Chem Project \\ 
+    \normalsize
+    by Adam Clark
+    \vspace{\fill}
+    
+    \flushleft
+    Abstract: We will focus on Dimensional Analysis and Molarity.
+    \pagebreak
+    
+    %: 0th Concept: Dimensional analysis
+    \flushleft
+    \large DIMENSIONAL ANALYSIS \\
+    \normalsize
+    Dimensional analysis is a way to convert units. 
+    \\~~~\\
+    Part 1: Simple Unit Conversions\\
+    Let's say we want to convert meters to centimeters. First we need to ask how many meters are in a centimeter. 
+    
+    \center
+    $ 1 \text{Meter} = 100 \text{Centimeter} $
+    \\ or \\
+    $ {1 \over 100} \text{Meter} = 1 \text{Centimeter} $
+    \flushleft
+    
+    Lets say we have 5 meters. We intuitively know that's 500 centimeters. How'd we do that?
+    \\~~~\\
+    Because 1 Meter is the same as 100 Centimeters we can say:
+
+    \center \large
+    ${100 \text{Centimeters} \over 1 \text {Meter}} = 1$
+    \\~\\
+    \flushleft \normalsize
+    Using the definition intuitively we get:
+    \center \large
+    ${5 \text{Meters} \over 1} \times {100 \text{Centimeters} \over 1 \text {Meter}} = {500 \text{Centimeters} \over 1}$
+    \\~\\
+    \flushleft \normalsize
+    The two 'Meters' cancel out. Leaving our units with Centimeters. 
+    \center \large
+    ${5 \cancel{\text{Meters}} \over 1} \times {100 \text{Centimeters} \over 1 \cancel{\text {Meter}}} = {500 \text{Centimeters} \over 1}$
+    
+    
+    
+    
+    
+    %: DIMENSIONAL ANALYSIS Try it
+    \pagebreak
+    \normalsize \flushleft
+    Let's try it out:\\
+    Given:\\
+    \center
+    $ 1 \text{Meter} = 100 \text{Centimeter} $
+    \\ or \\
+    $ {1 \over 100} \text{Meter} = 1 \text{Centimeter} $
+    \flushleft
+    \normalsize \flushleft
+    How many Meters is 10,000 Centimeters?\\
+    \large
+    \hspace{2 cm} 0. Re-State as a fraction
+        ${10,000 \text{Centimeters} \over 1}$
+    \\~\\\hspace{2 cm} 1. Find Conversion Factor
+        ${1 \text{Meter} \over 100 \text{Centimeter}}$
+    \\~\\\hspace{2 cm} 2. Multiply to cancel units \\
+        \center
+        ${10,000 \cancel{\text{Centimeters}} \over 1} \times {1 \text{Meter} \over 100 \cancel{\text{Centimeters}}} = 100 \text{Meters}$
+        \\~\\ or \\~\\
+        $ {10,000 \cancel{\text{Centimeters}} \over 1} \div ({1 \text{Meter} \over 100 \cancel{\text{Centimeters}}})^{-1} = {10,000 \cancel{\text{Centimeters}} \over 1} \div {100 \cancel{\text{Centimeter}} \over 1 \text{Meters}} = 100 \text{Meters} $
+    
+    
+    
+    \flushleft \normalsize
+    \pagebreak
+    %: Multi-layer DIMENSIONAL ANALYSIS
+    \flushleft
+    Multi-layer DIMENSIONAL ANALYSIS\\
+    \normalsize
+    Let's say we have the conversion factors
+    \center
+    $ 1 \text{ Meter} = 100 \text{ Centimeter} $\\~\\
+    $ 1 \text{ Inch} = 2.54 \text{ Centimeter} $
+    \\~\\ \flushleft
+    How do we convert from Meters to Inches? We can use dimensional analysis.
+    \\~\\
+    \center \large
+    $ {x \text{ Meters} \over 1} \times {100 \text{ Centimeters} \over 1 \text{ Meters}} = z \text{ Centimeters} $\\~\\
+    $ {z \text{ Centimeters} \over 1} \times {1 \text{ Inches} \over 2.54 \text{ Centimeters}} = y \text{ Inches} $
+    \\~\\
+    $ {x \text{ Meters} \over 1} \times {100 \text{ Centimeters} \over 1 \text{ Meters}} \times {1 \text{ Inches} \over 2.54 \text{ Centimeters}} = y \text{ Inches} $
+    
+    \flushleft \normalsize \\~\\
+    Notice how the units cancel out.
+    \center \large
+      $ {x \cancel{\text{ Meters}} \over 1} \times {100 \cancel{\text{ Centimeters}} \over 1 \cancel{\text{ Meters}}} \times {1 \text{ Inches} \over 2.54 \cancel{\text{ Centimeters}}} = y \text{ Inches} $
+      
+      
+      
+      
+    \pagebreak \normalsize
+    %: DIMENSIONAL ANALYSIS and Chem
+    \flushleft
+    DIMENSIONAL ANALYSIS and Chemistry
+    \\~\\
+    \center
+    \chemElement{H}{Hydrogen}{1}{1.008}
+    \flushleft
+    \\~\\
+    \\~\\
+    Let's say we have 10g of Hydrogen, how many moles is that? 
+    \\To get our conversion factor we look at the periodic table and take the molar mass.
+    \\~\\
+    \center \large
+    ${10 \text{ g of Hydrogen} \over 1} \times {1 \text{ mole of Hydrogen} \over 1.008 \text{ g of Hydrogen}} = 9.92 \text{ g of Hydrogen}$
+    
+    
+    
+    \pagebreak \flushleft
+    %: DIMENSIONAL ANALYSIS and Chem Try it
+    \center
+    \chemElement{Na}{Sodium}{11}{22.990}
+    \flushleft
+    \\~\\
+    \\~\\
+    Let's say we have 1 mole of sodium. How many grams is that?
+    \center \large
+    ${1 \text{ mole of Na} \over 1} \times {22.990 \text{ g of Na} \over 1 \text{ mole of Na}} = 22.99 \text{ g of Na}$
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    %: 1st Concept: Molarity
+    \pagebreak
+    \flushleft
+    \large MOLARITY \\
+    \normalsize
+    Molarity is defined as:
+    $$ \text{Molarity} = {\text{Number of Moles} \over  \text{Liters}}$$
+    
+    Molarity is concentration. Let's visualize that:
+    \center
+    TODO VISUAL HERE
+    \flushleft
+    \\~\\
+    As we can see above the left side has more 'atoms' than the right, but they have the same liter's.
+    
+    \\~~~\\
+    If we have the same volume and different 
+    
+
+\end{document}
