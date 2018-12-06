@@ -21,6 +21,8 @@ function btnEqual(){
     leftFill = 1;
     rightFill = 1;
     startParticleSystem();
+
+    document.getElementById('desc').innerText = "Notice how both sides have the same number of atoms and the same volume."
 }
 
 function btnEqualMolDifVol(){
@@ -40,6 +42,7 @@ function btnEqualMolDifVol(){
         particles[1][i].y_accel = particles[0][i].y_accel;
     }
     startParticleSystem();
+    document.getElementById('desc').innerText = "Notice how both sides have the same number of atoms but different volume."
 }
 
 function btnEqualVolDifMol(){
@@ -59,4 +62,6 @@ function btnEqualVolDifMol(){
         particles[1][i].y_accel = particles[0][i].y_accel;
     }
     startParticleSystem();
+
+    document.getElementById('desc').innerText = "Notice how both sides have the same volume but different number of atoms."
 }

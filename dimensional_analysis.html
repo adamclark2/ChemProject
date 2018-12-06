@@ -9,43 +9,58 @@
          
          <!-- My Scripts -->
          <script src="globals.js"></script>
-         <script src="visual_controller.js"></script>
-         <script src="particlesv2.js"></script> 
+         <script src="dimensional_controller.js"></script>
+
+
     </head>
-    <body class="container" onload="particle_init('p_left','p_right');startParticleSystem();btnEqual();">
+    <body class="container">
         <nav class="navbar navbar-expand-sm bg-dark">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                     <a class="nav-link" href="index.html">About</a>
                     </li>
-                    <li class="nav-item bg-secondary">
+                    <li class="nav-item">
                     <a class="nav-link" href="visual.html">Visualization of Molarity</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item bg-secondary">
                         <a class="nav-link" href="dimensional_analysis.html">Dimensional Analysis</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-itemy">
                     <a class="nav-link" href="latex_paper.html">Write Up</a>
                     </li>
                 </ul>
             </nav>
 
-        <div class="row justify-content-center pt-4">
-            <canvas id="p_left" width=250 height=300 ></canvas>
-            <div class="col-2"><!-- SPACER --></div>
-            <canvas id="p_right" width=250 height=300 ></canvas>
-        </div>
-
-        <div class="row pt-4"> 
-            <div class="btn-group-vertical col-md-5">
-                <div id="btnEqual" class="btn btn-secondary active" onclick="btnEqual()">Equal Containers</div>
-                <div id="btnEqualMolDifVol" class="btn btn-secondary" onclick="btnEqualMolDifVol()">Same moles different volume</div>
-                <div id="btnEqualVolDifMol" class="btn btn-secondary" onclick="btnEqualVolDifMol()">Same Volume different Moles</div>
+        <div class="row pt-4">
+            <div class="btn btn-success" onclick="btnRandom()">New Question</div>
+            <div class="col-12" id="question">
             </div>
 
-            <div class="ml-4 card col-5" id='desc'>
-                
+        </div>
+
+        $$\require{\cancel}$$
+        <div class="row pt-4 pb-5">
+            <div class="text-center col-12">
+                <div id='btn_answer' class="btn btn-dark mb-5" onclick="btnAnswer()" hidden>Show Answer</div>
+            </div>
+
+            <div id="answer" class="col-12 card" hidden>
+                1. Find the conversion factor.
+                <div class="" id='conversion_factor'>$$ 1 \implies 2 $$</div>
+
+                2. Put the text in fraction form
+                <div class="" id="fraction_form">$$ {2 \over 3}$$</div>
+
+                3. Multiply
+                <div class="" id='multiply'>$$ {2 \over 3}$$</div>
+
+                4. Cancel Terms to find units
+                <div class="" id='cancel'>$$ {2 \over 3}$$</div>
+
+                5. Final Answer
+                <div class="" id='ans'>$$42$$</div>
             </div>
         </div>
+        
     </body>
 </html>
