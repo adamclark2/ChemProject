@@ -10,6 +10,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{cancel}
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[urlcolor=blue]{hyperref}
+\hypersetup{colorlinks=true}
 
 % Macros
 \newcommand{\chemElement}[4]{ % Make a tile with a chemical element on it
@@ -38,7 +41,8 @@
     \center
     \LARGE Chem Project \\ 
     \normalsize
-    by Adam Clark
+    by Adam Clark\\
+    December 6 2018
     \vspace{\fill}
     
     \flushleft
@@ -165,6 +169,16 @@
     
     
     
+    \pagebreak \flushleft
+    %: DIMENSIONAL ANALYSIS Website
+    \center
+    Use the website for practice problems.
+    \includegraphics[width=\textwidth]{Dim.png}
+    \center \small \underline{ \url{https://adamclark2.github.io/ChemProject/dimensional_analysis.html} }
+    
+    
+    
+    
     
     
     
@@ -185,14 +199,18 @@
     $$ \text{Molarity} = {\text{Number of Moles} \over  \text{Liters}}$$
     
     Molarity is concentration. Let's visualize that:
-    \center
-    TODO VISUAL HERE
+    \includegraphics[width=\textwidth]{example.png}
+    \center \small \underline{\url{https://adamclark2.github.io/ChemProject/visual.html}}
+    
     \flushleft
     \\~\\
     As we can see above the left side has more 'atoms' than the right, but they have the same liter's.
     
-    \\~~~\\
-    If we have the same volume and different 
+    \\~\\
+    We can also use this definition to do math. Let's say we have a 5 Molar solution and we have 2 liters of it, how many Moles do we have? 
+    
+    \center
+    ${5 \text{ Moles} \over 1 \text { Liters}} \times {2 \text{ liters} \over 1} = 10 \text{ Moles}$
     
 
 \end{document}
