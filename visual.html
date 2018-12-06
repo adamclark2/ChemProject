@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Adam's Chem Project</title>
+
+         <!-- Css layout framework -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+         <!-- Math formula renderer -->
+         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+         
+         <!-- My Scripts -->
+         <script src="globals.js"></script>
+         <script src="visual_controller.js"></script>
+         <script src="particlesv2.js"></script> 
+    </head>
+    <body class="container" onload="particle_init('p_left','p_right');startParticleSystem()">
+            <nav class="navbar navbar-expand-sm bg-dark">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html">About</a>
+                        </li>
+                        <li class="nav-item bg-secondary">
+                        <a class="nav-link" href="visual.html">Visualization of Molarity</a>
+                        </li>
+                    </ul>
+                </nav>
+
+        <div class="row justify-content-center pt-4">
+            <canvas id="p_left" width=250 height=300 >
+            </canvas>
+            <div class="col-2">
+            <canvas id="p_right" width=250 height=300 >
+            </canvas>
+        </div>
+
+        <div class="col-12"><!-- Spacer --></div>
+        <div class="row pt-4">
+            <div class="btn-group-vertical">
+                <div id="btnEqual" class="btn btn-secondary active" onclick="btnEqual()">Equal Containers</div>
+                <div id="btnEqualMolDifVol" class="btn btn-secondary" onclick="btnEqualMolDifVol()">Same moles different volume</div>
+                <div id="btnEqualVolDifMol" class="btn btn-secondary" onclick="btnEqualVolDifMol()">Same Volume different Moles</div>
+            </div>
+        </div>
+    </body>
+</html>
